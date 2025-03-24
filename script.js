@@ -7,15 +7,15 @@ const inputFieldEl = document.getElementById("result");
 
 for (let i = 0; i < buttonsEl.length; i++) {
   buttonsEl[i].addEventListener("click", () => {
-    const buttonValue = buttonsEl[i].textContent.trim(); // অতিরিক্ত স্পেস কাটানোর জন্য trim() ব্যবহার
-    console.log(buttonValue); // ডিবাগিং করার জন্য: কোন বাটনটি ক্লিক হয়েছে দেখার জন্য
+    const buttonValue = buttonsEl[i].textContent.trim();
+    console.log(buttonValue);
 
     if (buttonValue === "C") {
-      clearResult(); // "C" ক্লিক হলে রেজাল্ট ক্লিয়ার করবে
+      clearResult(); 
     } else if (buttonValue === "=") {
-      calculateResult(); // "=" ক্লিক হলে রেজাল্ট ক্যালকুলেট করবে
+      calculateResult(); 
     } else {
-      appendValue(buttonValue); // অন্য কোনো বাটন ক্লিক হলে তা ইনপুটে যোগ করবে
+      appendValue(buttonValue);
     }
   });
 }
