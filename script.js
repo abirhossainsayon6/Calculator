@@ -21,18 +21,18 @@ for (let i = 0; i < buttonsEl.length; i++) {
 }
 
 function clearResult() {
-  inputFieldEl.value = ""; // রেজাল্ট ক্লিয়ার করবে
+  inputFieldEl.value = ""; 
 }
 
 function calculateResult() {
   try {
-    // eval() এর বদলে Function ব্যবহার করে সেফলি ক্যালকুলেট করা
+  
     inputFieldEl.value = Function('"use strict"; return (' + inputFieldEl.value + ')')();
   } catch (error) {
-    inputFieldEl.value = "Error"; // যদি কোনো ভুল থাকে, তাহলে "Error" দেখাবে
+    inputFieldEl.value = "Error"; 
   }
 }
 
 function appendValue(buttonValue) {
-  inputFieldEl.value += buttonValue; // বাটনের মান ইনপুট ফিল্ডে যোগ করবে
+  inputFieldEl.value += buttonValue;
 }
